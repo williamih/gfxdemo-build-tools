@@ -45,3 +45,9 @@ void FileDelete(const char* path)
     if (remove(path) != 0)
         FATAL("Failed to delete file %s", path);
 }
+
+void FileMove(const char* currPath, const char* newPath)
+{
+    if (rename(currPath, newPath) != 0)
+        FATAL("Failed to rename file %s to %s", currPath, newPath);
+}

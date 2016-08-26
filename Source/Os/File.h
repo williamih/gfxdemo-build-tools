@@ -6,5 +6,6 @@
 
 void FileReadAllBytes(const char* path, std::vector<u8>* output);
 void FileDelete(const char* path);
+void FileMove(const char* currPath, const char* newPath);
 
 #endif // OS_FILE_H
