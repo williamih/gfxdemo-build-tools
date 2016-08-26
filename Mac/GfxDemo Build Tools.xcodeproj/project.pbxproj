@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A42C85F1D6FBF2F000CB2FC /* Str.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A42C8591D6FBF2F000CB2FC /* Str.cpp */; };
+		7A42C8601D6FBF2F000CB2FC /* BinaryWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A42C85D1D6FBF2F000CB2FC /* BinaryWriter.cpp */; };
 		7A4A9C7C1D6FADA200E88B57 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A4A9C7B1D6FADA200E88B57 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A42C8581D6FBF2F000CB2FC /* Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endian.h; sourceTree = "<group>"; };
+		7A42C8591D6FBF2F000CB2FC /* Str.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Str.cpp; sourceTree = "<group>"; };
+		7A42C85A1D6FBF2F000CB2FC /* Str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Str.h; sourceTree = "<group>"; };
+		7A42C85B1D6FBF2F000CB2FC /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		7A42C85D1D6FBF2F000CB2FC /* BinaryWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryWriter.cpp; sourceTree = "<group>"; };
+		7A42C85E1D6FBF2F000CB2FC /* BinaryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryWriter.h; sourceTree = "<group>"; };
 		7A4A9C6F1D6FACCA00E88B57 /* MTLShaderCompiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MTLShaderCompiler; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4A9C7B1D6FADA200E88B57 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,9 +46,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A42C8561D6FBF2F000CB2FC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7A42C8571D6FBF2F000CB2FC /* Core */,
+				7A42C85C1D6FBF2F000CB2FC /* Util */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+		7A42C8571D6FBF2F000CB2FC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7A42C85B1D6FBF2F000CB2FC /* Types.h */,
+				7A42C8581D6FBF2F000CB2FC /* Endian.h */,
+				7A42C85A1D6FBF2F000CB2FC /* Str.h */,
+				7A42C8591D6FBF2F000CB2FC /* Str.cpp */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7A42C85C1D6FBF2F000CB2FC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7A42C85E1D6FBF2F000CB2FC /* BinaryWriter.h */,
+				7A42C85D1D6FBF2F000CB2FC /* BinaryWriter.cpp */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		7A4A9C661D6FACCA00E88B57 = {
 			isa = PBXGroup;
 			children = (
+				7A42C8561D6FBF2F000CB2FC /* Source */,
 				7A4A9C791D6FADA200E88B57 /* MTLShaderCompiler */,
 				7A4A9C701D6FACCA00E88B57 /* Products */,
 			);
@@ -128,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4A9C7C1D6FADA200E88B57 /* main.cpp in Sources */,
+				7A42C85F1D6FBF2F000CB2FC /* Str.cpp in Sources */,
+				7A42C8601D6FBF2F000CB2FC /* BinaryWriter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,10 +212,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Source";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Source";
 			};
 			name = Debug;
 		};
@@ -209,23 +252,35 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Source";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Source";
 			};
 			name = Release;
 		};
 		7A4A9C771D6FACCA00E88B57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../Source",
+					"$(SRCROOT)/../MTLShaderCompiler/Source",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Source $(SRCROOT)/../MTLShaderCompiler/Source";
 			};
 			name = Debug;
 		};
 		7A4A9C781D6FACCA00E88B57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../Source",
+					"$(SRCROOT)/../MTLShaderCompiler/Source",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Source $(SRCROOT)/../MTLShaderCompiler/Source";
 			};
 			name = Release;
 		};
