@@ -35,6 +35,13 @@ void BinaryWriter::WriteF32(f32 n)
     fwrite(&n, 4, 1, m_file);
 }
 
+void BinaryWriter::Write64(u64 n)
+{
+    CheckAlign(8);
+    n = EndianSwapLE64(n);
+    fwrite(&n, 8, 1, m_file);
+}
+
 void BinaryWriter::WriteRawData(const void* data, size_t len)
 {
     CheckAlign(ALIGNMENT);

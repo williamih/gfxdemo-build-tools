@@ -11,6 +11,7 @@ public:
     void Write8(u8 n);
     void Write16(u16 n);
     void Write32(u32 n);
+    void Write64(u64 n);
     void WriteF32(f32 n);
     void WriteRawData(const void* data, size_t len);
 
