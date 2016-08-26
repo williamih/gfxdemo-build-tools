@@ -10,6 +10,7 @@
 		7A42C85F1D6FBF2F000CB2FC /* Str.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A42C8591D6FBF2F000CB2FC /* Str.cpp */; };
 		7A42C8601D6FBF2F000CB2FC /* BinaryWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A42C85D1D6FBF2F000CB2FC /* BinaryWriter.cpp */; };
 		7A4A9C7C1D6FADA200E88B57 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A4A9C7B1D6FADA200E88B57 /* main.cpp */; };
+		7A623C1B1D7009620053B7EA /* Process_posix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A623C1A1D70095E0053B7EA /* Process_posix.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,9 @@
 		7A42C85E1D6FBF2F000CB2FC /* BinaryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryWriter.h; sourceTree = "<group>"; };
 		7A4A9C6F1D6FACCA00E88B57 /* MTLShaderCompiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MTLShaderCompiler; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4A9C7B1D6FADA200E88B57 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7A623C171D7008EF0053B7EA /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		7A623C191D70095E0053B7EA /* Process.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Process.h; sourceTree = "<group>"; };
+		7A623C1A1D70095E0053B7EA /* Process_posix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Process_posix.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				7A42C8571D6FBF2F000CB2FC /* Core */,
+				7A623C181D70095E0053B7EA /* Os */,
 				7A42C85C1D6FBF2F000CB2FC /* Util */,
 			);
 			name = Source;
@@ -61,6 +66,7 @@
 			children = (
 				7A42C85B1D6FBF2F000CB2FC /* Types.h */,
 				7A42C8581D6FBF2F000CB2FC /* Endian.h */,
+				7A623C171D7008EF0053B7EA /* Macros.h */,
 				7A42C85A1D6FBF2F000CB2FC /* Str.h */,
 				7A42C8591D6FBF2F000CB2FC /* Str.cpp */,
 			);
@@ -108,6 +114,15 @@
 				7A4A9C7B1D6FADA200E88B57 /* main.cpp */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		7A623C181D70095E0053B7EA /* Os */ = {
+			isa = PBXGroup;
+			children = (
+				7A623C191D70095E0053B7EA /* Process.h */,
+				7A623C1A1D70095E0053B7EA /* Process_posix.cpp */,
+			);
+			path = Os;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +184,7 @@
 				7A4A9C7C1D6FADA200E88B57 /* main.cpp in Sources */,
 				7A42C85F1D6FBF2F000CB2FC /* Str.cpp in Sources */,
 				7A42C8601D6FBF2F000CB2FC /* BinaryWriter.cpp in Sources */,
+				7A623C1B1D7009620053B7EA /* Process_posix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
