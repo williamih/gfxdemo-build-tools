@@ -82,7 +82,7 @@ static bool Compile(const char* inputPath, const char* outputPath,
 
     const u32 nPermutations = 1 << (u32)ifdefs.size();
 
-    writer.WriteRawData("RHS", 4);
+    writer.WriteRawData("RDHS", 4);
     writer.Write32(SHADER_FORMAT_VERSION);
     writer.WriteRawData("LTEM", 4);
     writer.Write32(nPermutations);
