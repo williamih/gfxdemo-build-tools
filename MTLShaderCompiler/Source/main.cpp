@@ -43,7 +43,7 @@ const char* const TOOL_METALLIB =
 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/usr/bin/metallib";
 
 const char* const SYSROOT =
-"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk";
+"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk";
 
 const char* const AIR_FILE = "out.air";
 const char* const DIAG_FILE = "diag.dia";
